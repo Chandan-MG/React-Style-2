@@ -1,0 +1,57 @@
+.card{
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    width: 35vw;
+    /* height: 30vh; */
+  }
+  
+  .user-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .user-control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    margin: 5%;
+  }
+  
+  .user-control input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+    margin-left: 5%;
+  }
+
+.new-goal-control.invalid input{
+  border-color: red;
+  background: rgb(234, 107, 107);
+}
+.new-goal-control.invalid label{
+  color: red;
+}
+
+.user-button button{
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #7d0e87;
+  background-color: #790e87;
+  color: white;
+  border-radius: 4px;
+  margin-right: 1rem;
+  margin-bottom: 1%;
+  margin-left: 2%;
+}
+
+.new-goal-button.invalid button{
+  border: 1px solid #ff1212;;
+  background-color: #ff1212;
+}
