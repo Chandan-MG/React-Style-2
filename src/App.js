@@ -25,7 +25,7 @@ function App() {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <div className='app'>
         <div>
           <UserInput onAddUser={setUserInputHandler} />
@@ -34,7 +34,7 @@ function App() {
           <UserList usersdata = {usersdata} />
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 
