@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 // import Card from "./Card";
 import './ErrorModel.css';
 import ReactDOM from 'react-dom';
@@ -27,10 +27,10 @@ const ModalOverlay = (props) => {
 
 const ErrorModel = (props) =>{
     return(
-        <Fragment>
+        <React.Fragment>
             {ReactDOM.createPortal(<Backdrop onClick={props.onConfirm} />, document.getElementById('backdrop-root') )}
             {ReactDOM.createPortal(<ModalOverlay total={props.title} message={props.message} onConfirm={props.onConfirm} />, document.getElementById('overlay-root'))}
-        </Fragment>
+        </React.Fragment>
     )
 }
 

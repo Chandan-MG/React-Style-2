@@ -15,6 +15,7 @@ const UserList = (props) =>{
                         id = {newuser.id}
                         name = {newuser.name}
                         age = {newuser.age}
+                        collegename = {newuser.collegename}
                     />
                 ))}
             </ul>

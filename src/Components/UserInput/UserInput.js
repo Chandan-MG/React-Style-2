@@ -6,6 +6,7 @@ import Wrapper from "../Helpers/Wrapper";
 const UserInput = (props) => {
     const [ enteredName, setEnteredName] = useState('');
     const [ enteredAge, setEnteredAge] = useState('');
+    const [ enteredCollegeName, setEnteredCollegeName] = useState('');
 
     const [ error, setError ] = useState("");
 
@@ -15,14 +16,17 @@ const UserInput = (props) => {
     const ageChangedHandler = (event) =>{
         setEnteredAge(event.target.value);
     }
+    const collegeNameChangedHandler = (event) =>{
+        setEnteredCollegeName(event.target.value);
+    }
 
     const submitFormHandler = (event) =>{
         event.preventDefault();
 
-        if(enteredName.trim().length === 0 && enteredAge.trim().length ===0 ){
+        if(enteredName.trim().length === 0 && enteredAge.trim().length ===0 && enteredCollegeName.trim().length ===0 ){
             setError({
                 title : 'Invalid input',
-                message : 'Please enter valid age and name'
+                message : 'Please enter valid age and name and college name'
             })
             return;
         }
@@ -37,12 +41,14 @@ const UserInput = (props) => {
 
         const userData = {
             name : enteredName,
-            age : enteredAge
+            age : enteredAge,
+            collegename : enteredCollegeName
         };
 
         props.onAddUser(userData);
         setEnteredName('');
         setEnteredAge('');
+        setEnteredCollegeName('');
     }
 
     const errorHandler = () => {
@@ -62,6 +68,10 @@ const UserInput = (props) => {
                         <div className='user-control'>
                             <label id='text' >Age (Years)</label>
                             <input type='number' id='text' value={enteredAge} onChange={ageChangedHandler} />
+                        </div>
+                        <div className='user-control'>
+                            <label id='college' >College Name</label>
+                            <input type='text' id='college' value={enteredCollegeName} onChange={collegeNameChangedHandler} />
                         </div>
                     </div>
                     <div className='user-button'>

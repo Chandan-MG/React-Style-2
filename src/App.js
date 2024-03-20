@@ -14,11 +14,12 @@ function App() {
   const [usersdata, setUsersData] = useState(DUMMY_DATA);
 
   const setUserInputHandler = (user) => {
-    if (user.name.trim() !== '' && user.age.trim() !== '') {
+    if (user.name.trim() !== '' && user.age.trim() !== '' && user.collegename.trim() !=='') {
       const newUser = {
         id: Math.random().toString(),
         name: user.name.trim(),
         age: user.age.trim(),
+        collegename: user.collegename.trim()
       };
       setUsersData(prevUserData => [...prevUserData, newUser]);
     }

@@ -9,7 +9,11 @@ const UserItem = (props) => {
                 </div> &nbsp;
                 <div>
                     ({props.age} years old)
+                </div> &nbsp;
+                <div>
+                    {props.collegename}
                 </div>
+                
             </div>
     )
 }
